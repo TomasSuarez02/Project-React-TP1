@@ -6,27 +6,29 @@
 }
 
 * {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Harrington';
+  src: url(/public/harrington.zip);
+  background-color: #140421;
+  letter-spacing: 3;
 }
 
 .buttonReiniciar {
-  color: red;
-  border-color: red;
-  letter-spacing: 2px;
+  color: #FF0000;
+  border-color: #FF0000;
+  background-color: #470516;
   font-size: large;
 }
 
 .buttonIntento {
-  color: green;
-  border-color: green;
-  letter-spacing: 2px;
+  color: #03FF06;
+  border-color: #03FF06;
+  background-color: #032E06;
   font-size: large;
+  margin-left: 10px;
 }
 
-.titulo {
-  letter-spacing: 3px;
-}
-
-p {
-  letter-spacing: 2px;
+input {
+  font-size: x-large;
+  background-color: black;
+  border-color: grey;
 }

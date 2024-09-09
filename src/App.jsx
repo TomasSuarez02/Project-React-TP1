@@ -34,14 +34,14 @@ function App() {
         setScore(0);
         setMensaje('¡Perdiste! El número era: ' + numeroAdivinar);
       }
-    } else if (numeroIngresado > numeroAdivinar && (numeroAdivinar - numeroIngresado) >= 5) {
+    } else if (numeroIngresado > numeroAdivinar && (numeroIngresado - numeroAdivinar) >= 5) {
       setMensaje('¡El número ingresado es Muy Alto! Intenta con uno más bajo.');
       setScore(score - 1);
       if (score == 1) {
         setScore(0);
         setMensaje('¡Perdiste! El número era: ' + numeroAdivinar);
       }
-    } else if (numeroIngresado > numeroAdivinar && (numeroAdivinar - numeroIngresado) < 5) {
+    } else if (numeroIngresado > numeroAdivinar && (numeroIngresado - numeroAdivinar) < 5) {
       setMensaje('¡El número ingresado es Alto, estás cerca! Intenta con uno más bajo.');
       setScore(score - 1);
       if (score == 1) {
@@ -69,10 +69,10 @@ function App() {
           ¡Probar suerte!
       </button>
       </div>
-      <h3>{mensaje}</h3>
+      <h2>{mensaje}</h2>
       <div className="score"> 
-        <h4>Score: {score}</h4>
-        <h4>High Score: {highscore}</h4>
+        <h3>Score: {score}</h3>
+        <h3>High Score: {highscore}</h3>
       </div>
     </>
   )

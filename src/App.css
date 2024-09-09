@@ -5,32 +5,28 @@
   text-align: center;
 }
 
+* {
+  font-family: 'Times New Roman', Times, serif;
+}
+
 .buttonReiniciar {
   color: red;
   border-color: red;
   letter-spacing: 2px;
-  font-family: 'Times New Roman', Times, serif;
-
+  font-size: large;
 }
 
 .buttonIntento {
   color: green;
   border-color: green;
   letter-spacing: 2px;
-  font-family: 'Times New Roman', Times, serif;
-
+  font-size: large;
 }
 
 .titulo {
-  letter-spacing: 5px;
-  font-family: 'Times New Roman', Times, serif;
-}
-
-.score {
-  font-family: 'Times New Roman', Times, serif;
+  letter-spacing: 3px;
 }
 
 p {
   letter-spacing: 2px;
-  font-family: 'Times New Roman', Times, serif;
 }

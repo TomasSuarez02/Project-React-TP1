@@ -13,40 +13,46 @@ function App() {
   };
 
   const verificarIntento = () => {
+    setNumeroIngresado('');
     if (numeroIngresado == numeroAdivinar) {
-      setMensaje('¡El número ingresado es Correcto!');
+      setMensaje('¡El número ' + numeroIngresado + ' es el que estaba pensando, haz ganado!');
       if (highscore < score) {
         setHighScore(score);
       }
     } else if (score == 0) {
-      setMensaje('¡Perdiste! El número era: ' + numeroAdivinar);
+      setMensaje('¡Perdiste! El número era ' + numeroAdivinar);
+      setNumeroIngresado('');
     } else if (numeroIngresado < numeroAdivinar && (numeroAdivinar - numeroIngresado) >= 5) {
-      setMensaje('¡El número ingresado es Muy Bajo! Intenta con uno más alto.');
+      setMensaje('¡El número ingresado es Muy Bajo! Intenta con uno más alto que ' + numeroIngresado);
       setScore(score - 1);
       if (score == 1) {
         setScore(0);
-        setMensaje('¡Perdiste! El número era: ' + numeroAdivinar);
+        setMensaje('¡Perdiste! El número era ' + numeroAdivinar);
+        setNumeroIngresado('');
       }
     } else if (numeroIngresado < numeroAdivinar && (numeroAdivinar - numeroIngresado) < 5) {
-      setMensaje('¡El número ingresado es Bajo, estás cerca! Intenta con uno más alto.');
+      setMensaje('¡El número ingresado es Bajo, estás cerca! Intenta con uno más alto que ' + numeroIngresado);
       setScore(score - 1);
       if (score == 1) {
         setScore(0);
-        setMensaje('¡Perdiste! El número era: ' + numeroAdivinar);
+        setMensaje('¡Perdiste! El número era ' + numeroAdivinar);
+        setNumeroIngresado('');
       }
     } else if (numeroIngresado > numeroAdivinar && (numeroIngresado - numeroAdivinar) >= 5) {
-      setMensaje('¡El número ingresado es Muy Alto! Intenta con uno más bajo.');
+      setMensaje('¡El número ingresado es Muy Alto! Intenta con uno más bajo que ' + numeroIngresado);
       setScore(score - 1);
       if (score == 1) {
         setScore(0);
-        setMensaje('¡Perdiste! El número era: ' + numeroAdivinar);
+        setMensaje('¡Perdiste! El número era ' + numeroAdivinar);
+        setNumeroIngresado('');
       }
     } else if (numeroIngresado > numeroAdivinar && (numeroIngresado - numeroAdivinar) < 5) {
-      setMensaje('¡El número ingresado es Alto, estás cerca! Intenta con uno más bajo.');
+      setMensaje('¡El número ingresado es Alto, estás cerca! Intenta con uno más bajo que ' + numeroIngresado);
       setScore(score - 1);
       if (score == 1) {
         setScore(0);
-        setMensaje('¡Perdiste! El número era: ' + numeroAdivinar);
+        setMensaje('¡Perdiste! El número era ' + numeroAdivinar);
+        setNumeroIngresado('');
       }
     } 
   }
@@ -64,7 +70,7 @@ function App() {
       </button>
       <h1 className="titulo">¡Adivina el Número! (Entre 1 y 20)</h1>
       <div className="adivinar">
-      <input type="number" value={numeroIngresado} onChange={handleInputChange}/>
+      <input type="text" value={numeroIngresado} onChange={handleInputChange}/>
       <button className="buttonIntento" onClick={verificarIntento}>
           ¡Probar suerte!
       </button>

@@ -1,0 +1,36 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.buttonReiniciar {
+  color: red;
+  border-color: red;
+  letter-spacing: 2px;
+  font-family: 'Times New Roman', Times, serif;
+
+}
+
+.buttonIntento {
+  color: green;
+  border-color: green;
+  letter-spacing: 2px;
+  font-family: 'Times New Roman', Times, serif;
+
+}
+
+.titulo {
+  letter-spacing: 5px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.score {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+p {
+  letter-spacing: 2px;
+  font-family: 'Times New Roman', Times, serif;
+}

@@ -20,11 +20,17 @@ function App() {
       }
     } else if (score == 0) {
       setMensaje('¡Perdiste! El número era: ' + numeroAdivinar);
-    } else if (numeroIngresado < numeroAdivinar) {
+    } else if (numeroIngresado < numeroAdivinar && (numeroAdivinar - numeroIngresado) >= 5) {
       setMensaje('¡El número ingresado es Muy Bajo! Intenta con uno más alto.');
       setScore(score - 1);
-    } else if (numeroIngresado > numeroAdivinar) {
+    } else if (numeroIngresado < numeroAdivinar && (numeroAdivinar - numeroIngresado) < 5) {
+      setMensaje('¡El número ingresado es Bajo, estás cerca! Intenta con uno más alto.');
+      setScore(score - 1);
+    } else if (numeroIngresado > numeroAdivinar && (numeroAdivinar - numeroIngresado) >= 5) {
       setMensaje('¡El número ingresado es Muy Alto! Intenta con uno más bajo.');
+      setScore(score - 1);
+    } else if (numeroIngresado > numeroAdivinar && (numeroAdivinar - numeroIngresado) < 5) {
+      setMensaje('¡El número ingresado es Alto, estás cerca! Intenta con uno más bajo.');
       setScore(score - 1);
     } 
   }
